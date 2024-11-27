@@ -18,7 +18,7 @@
   "name":"room_1",
   "parent":{
     "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "path":"folders/Shaders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
