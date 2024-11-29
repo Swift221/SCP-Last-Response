@@ -18,3 +18,5 @@ char_index_3 = 0;
 timer = 0;
 line_index = 0; 
 typing_complete = false;
+
+sound_played = false;

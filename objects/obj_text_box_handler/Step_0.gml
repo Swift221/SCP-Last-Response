@@ -1,4 +1,4 @@
-// Step Event of obj_textbox
+// Step Event of obj_text_box_handler
 
 // If typing is not complete, continue typing
 if (!typing_complete) {
@@ -23,6 +23,13 @@ if (!typing_complete) {
             char_index_3 += 1;
         }
 
+        // Play the typing sound once the typing starts (only if it's not already playing)
+        if (line_index == 0 && char_index_1 == 1 && !sound_played) {
+            // Play the typing sound (looping)
+            audio_play_sound(typing_sound, 1, true);
+            sound_played = true;
+        }
+
         // If one line is fully typed, move to the next line
         if ((line_index == 0 && char_index_1 == string_length(text_content[0])) || 
             (line_index == 1 && char_index_2 == string_length(text_content[1])) || 
@@ -42,6 +49,8 @@ if (!typing_complete) {
         // If all lines are typed, set typing_complete to true to stop further typing
         if (line_index > 2) {
             typing_complete = true;
+            // Stop the typing sound when typing is complete
+            audio_stop_sound(typing_sound);
         }
     }
 }
