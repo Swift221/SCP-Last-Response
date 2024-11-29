@@ -1,11 +1,9 @@
-
-
 // Increase the timer by the elapsed time
 typing_timer += delta_time;
 
 if (typing_timer >= typing_speed) {
     // Update typing for each line
-    if (current_line < array_length_1d(text_content)) {
+    if (current_line < array_length(text_content)) {
         // Type the current line
         if (char_index[current_line] < string_length(text_content[current_line])) {
             // Add the next character to the typed text

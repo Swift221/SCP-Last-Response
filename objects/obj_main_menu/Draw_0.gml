@@ -38,8 +38,8 @@ for	(var i = 0; i < op_length; i++)
 		_stc.wl = string_width(str1)/2; 
 		_stc.wr = string_width(str1)/2; 
 	} else {
-		_stc.wl = string_width(str1);
-		_stc.wr = string_width(str2);
+		_stc.wl = string_width(str1 + " ");
+		_stc.wr = string_width(str2 + " ");
 	}
 	//is the mouse hovering over a menu entry
 	var _hovering_over_text = false;

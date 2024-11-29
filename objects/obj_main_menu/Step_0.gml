@@ -30,7 +30,7 @@ function process_menu() {
 				case 1:
 					menu_level = SETTINGS; break;
 				//Credits
-				case 2:  break;
+				case 2: room_goto(room_credits); break;
 				//Exit
 				case 3: game_end(); break;
 				}

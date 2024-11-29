@@ -24,5 +24,3 @@ current_line = 0;
 
 line_y_offset = 15;
 base_y_position = 60;
-
-
