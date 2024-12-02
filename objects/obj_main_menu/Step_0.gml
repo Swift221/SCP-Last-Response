@@ -3,7 +3,7 @@ down_key = keyboard_check_released(vk_down) + keyboard_check_pressed(ord("S"));
 up_key = keyboard_check_pressed(vk_up) + keyboard_check_pressed(ord("W"));
 left_key = keyboard_check_pressed(vk_left) + keyboard_check_pressed(ord("A"));
 right_key = keyboard_check_pressed(vk_right) + keyboard_check_pressed(ord("D"));
-accept_key = keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_enter);
+accept_key = keyboard_check_pressed(vk_space);
 
 //store number of options in current menu
 op_length = array_length(option[menu_level]);
@@ -14,6 +14,10 @@ h_pos = right_key - left_key;
 if pos >= op_length { pos = 0 };
 if pos < 0 { pos = op_length - 1 };
 if (menu_level == CONTROLS) pos = 0;
+//Play sound effect if pressing right or left and in certain menu levels
+if (right_key || left_key) && (((menu_level == VIDEO || menu_level == SOUND) && pos != 0)) {
+	audio_play_sound(Sound1_mouseclick, 0, false);
+}
 //use the options
 function process_menu() {
 	if accept_key || (is_array(option[menu_level][pos]) && (h_pos != 0)) {
@@ -25,34 +29,59 @@ function process_menu() {
 		case MAIN:
 			switch(pos) {
 				//Play
-				case 0: room_goto(room_cutscene); break;
+				case 0:
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					room_goto(room_cutscene); 
+					break;
 				//Settings
 				case 1:
-					menu_level = SETTINGS; break;
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level =  SETTINGS; 
+					break;
 				//Credits
-				case 2: room_goto(room_credits); break;
+				case 2:
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					room_goto(room_credits); 
+					break;
 				//Exit
-				case 3: game_end(); break;
+				case 3:
+					game_end(); 
+					break;
 				}
 			break;
 		//Settings menu
 		case SETTINGS:
 			switch(pos) {
 				//Video
-				case 0: menu_level = VIDEO; break;
+				case 0: 
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = VIDEO; 
+					break;
 				//Sound
-				case 1: menu_level = SOUND; break;
+				case 1:
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = SOUND;
+					break;
 				//Controls
-				case 2: menu_level = CONTROLS; break;
+				case 2: 
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = CONTROLS; 
+					break;
 				//Back
-				case 3: menu_level = MAIN; break;
+				case 3: 
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = MAIN; 
+					break;
 			}
 		break;
 		//Controls menu
 		case CONTROLS:
 			switch(pos) {
 				//Back
-				case 0: menu_level = SETTINGS; break; 
+				case 0: 
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = SETTINGS; 
+					break; 
 				//Up
 				case 1: break;
 				//Down
@@ -67,9 +96,13 @@ function process_menu() {
 		case VIDEO:
 			switch(pos) {
 				//Back
-				case 0: menu_level = SETTINGS; break;
+				case 0:
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = SETTINGS; 
+					break;
 				//Text speed
-				case 1: change_menu(h_pos, "text_speed");
+				case 1: 
+				change_menu(h_pos, "text_speed");
 				break;
 			}
 		break;
@@ -77,13 +110,18 @@ function process_menu() {
 		case SOUND:
 			switch(pos) {
 				//Back
-				case 0: menu_level = SETTINGS; break;
+				case 0: 
+					audio_play_sound(Sound1_mouseclick, 0, false);
+					menu_level = SETTINGS; 
+					break;
 				//SFX
-				case 1: change_menu(h_pos, "sfx"); 
-				break;
+				case 1: 
+					change_menu(h_pos, "sfx"); 
+					break;
 				//Music
-				case 2: change_menu(h_pos, "music");
-				break;
+				case 2: 
+					change_menu(h_pos, "music");
+					break;
 			}
 		}
 	//set position back

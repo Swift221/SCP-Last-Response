@@ -70,9 +70,12 @@ for	(var i = 0; i < op_length; i++)
 				//increment the array depending on where we click
 				if mouse_x < menu_x_pos - _stc.wl + click_area_w {
 					h_pos = -1; 
+					audio_play_sound(Sound1_mouseclick, 0, false);
 					} else if mouse_x > menu_x_pos - click_area_w && mouse_x < menu_x_pos {
 						h_pos = 1;
-					}		
+						audio_play_sound(Sound1_mouseclick, 0, false);
+					}
+			
 			}
 			
 			process_menu();		
