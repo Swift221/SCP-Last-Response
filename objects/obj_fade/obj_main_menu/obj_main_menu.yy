@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_menu",
+  "%Name":"obj_main_menu",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_menu",
+  "name":"obj_main_menu",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_play",
-    "path":"sprites/spr_play/spr_play.yy",
+    "name":"spr_main_menu",
+    "path":"sprites/spr_main_menu/spr_main_menu.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,9 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_credits",
-  "eventList":[],
+  "%Name":"obj_fade",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_credits",
+  "name":"obj_fade",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite2",
-    "path":"sprites/Sprite2/Sprite2.yy",
+    "name":"spr_fade",
+    "path":"sprites/spr_fade/spr_fade.yy",
   },
   "spriteMaskId":null,
   "visible":true,
