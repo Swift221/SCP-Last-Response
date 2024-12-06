@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"_snowstate_config",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"_snowstate_config",
+  "parent":{
+    "name":"_snowstate_config",
+    "path":"folders/SnowState/_snowstate_config.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
