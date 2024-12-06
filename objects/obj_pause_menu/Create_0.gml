@@ -1,9 +1,10 @@
 width= 145;
 height= 210;
+//MENU VARIABLES
 //Border between the options and the edge of the text box
 op_border = 16;
 //Space between the options
-op_space = 48;
+op_space = 32;
 //Current position selected in the menu
 pos = 0;
 h_pos = 0;
@@ -17,16 +18,14 @@ menu_y_pos = room_height * .4;     //Y position for the menu
 click_area_w = 20;								 //width of the area we can click to change values
 
 global.dsm_settings = ds_map_create();
-
 ds_map_add(SET, "sfx", [5, [0, 10]]);
 ds_map_add(SET, "music", [5, [0, 10]]);
 ds_map_add(SET, "text_speed", [1, ["slow", "normal", "fast"]]);
 
 //Starting menu
-option[MAIN, 0] = "Play";
+option[MAIN, 0] = "Resume";
 option[MAIN, 1] = "Settings";
-option[MAIN, 2] = "Credits";
-option[MAIN, 3] = "Exit";
+option[MAIN, 2] = "Return to main menu";
 
 //Settings menu
 option[SETTINGS, 0] = "Video"
@@ -58,7 +57,7 @@ function button(_y, _wl, _wr, _h) constructor {
 }
 
 //initialize a menu for each button entry
-var _h = 40;
+var _h = 32;
 for (var a = 0; a < TOTAL; ++a) {
     for (var b = 0; b < array_length(option[a]); ++b) {
 	    button_arr[a][b] = new button(0, room_width/2, room_width/2, _h);

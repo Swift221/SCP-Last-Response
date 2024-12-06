@@ -1,6 +1,5 @@
 draw_set_font(fnt_main_menu);
 
-
 for	(var i = 0; i < op_length; i++)
 {
 	//reset color
