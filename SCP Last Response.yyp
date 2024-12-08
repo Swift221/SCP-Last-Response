@@ -60,6 +60,8 @@
     {"id":{"name":"sq_snow","path":"sequences/sq_snow/sq_snow.yy",},},
     {"id":{"name":"Sound1_mouseclick","path":"sounds/Sound1_mouseclick/Sound1_mouseclick.yy",},},
     {"id":{"name":"typing_sound","path":"sounds/typing_sound/typing_sound.yy",},},
+    {"id":{"name":"mtf_back_walk","path":"sprites/mtf_back_walk/mtf_back_walk.yy",},},
+    {"id":{"name":"mtf_front_walk","path":"sprites/mtf_front_walk/mtf_front_walk.yy",},},
     {"id":{"name":"mtf_top","path":"sprites/mtf_top/mtf_top.yy",},},
     {"id":{"name":"mtf","path":"sprites/mtf/mtf.yy",},},
     {"id":{"name":"spr_fade","path":"sprites/spr_fade/spr_fade.yy",},},
