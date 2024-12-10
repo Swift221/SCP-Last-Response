@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"mtf_top",
-    "path":"sprites/mtf_top/mtf_top.yy",
+    "name":"mtf_front_walk",
+    "path":"sprites/mtf_front_walk/mtf_front_walk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

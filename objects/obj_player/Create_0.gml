@@ -1,7 +1,7 @@
 //Movement variables
 xspd = 0;
 yspd = 0;
-mov_spd = 4;
+mov_spd = 1;
 //Pause variable
 pause_delay = 0;
 //STATES
@@ -24,6 +24,12 @@ fsm = new SnowState("walk");
 				//Move
 				x += xspd;
 				y += yspd;
+				
+				//SPRITE
+				if key_up { sprite_index = mtf_front_walk; }
+				if key_down { sprite_index = mtf_back_walk; }
+				//Animate
+				if xspd == 0 && yspd == 0 { image_index = 0; } //Stop animating if not moving
 				
 				//Collisions
 				// Check for collision in the X direction
